@@ -47,14 +47,13 @@ const MobileNav = () => {
                     const isActive = link.route === pathname;
                     return (
                       <li
-                        key={link.route}
                         className={`${
-                          isActive &&
-                          "bg-purple-gradient bg-cover bg-clip-text text-transparent"
+                          isActive && "gradient-text"
                         } p-18 flex whitespace-nowrap text-dark-700`}
+                        key={link.route}
                       >
                         <Link
-                          className="p-16-semibold flex size-full gap-4 p-4"
+                          className="sidebar-link cursor-pointer"
                           href={link.route}
                         >
                           <Image
@@ -62,7 +61,6 @@ const MobileNav = () => {
                             alt="logo"
                             width={24}
                             height={24}
-                            className={`${isActive && "brightness-200"}`}
                           />
                           {link.label}
                         </Link>
